@@ -20,7 +20,6 @@ namespace Models
         public override string ToString()
         {
             return linha + ", " + coluna;
-                 
         }
 
     }
