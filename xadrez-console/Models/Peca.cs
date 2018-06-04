@@ -1,6 +1,6 @@
 ﻿namespace Models
 {
-    class Peca
+    abstract class Peca
     {
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
@@ -15,6 +15,9 @@
             this.cor = cor;
             qtdMovimentos = 0;
         }
+
+        public abstract bool[,] movimentosPossiveis();
+        
 
         public void incrementoQTDMOV()
         {
