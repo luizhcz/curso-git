@@ -14,8 +14,8 @@ namespace xadrez_console
             Posicao p;
             Tabuleiro T;
 
-            T = new Tabuleiro(8, 4);
-
+            T = new Tabuleiro(8, 8);
+            Tela.imprimirtabuleiro(T);
             
             Console.ReadLine();
 
