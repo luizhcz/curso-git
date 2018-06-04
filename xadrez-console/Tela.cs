@@ -1,10 +1,43 @@
-﻿using Models;
+﻿using System.Collections.Generic;
+using Models;
 using System;
 using Xadrez;
 namespace xadrez_console
 {
     class Tela
     {
+        public static void imprimirPartida(PartidaDeXadrez partida)
+        {
+            imprimirtabuleiro(partida.tab);
+            Console.WriteLine();
+            imprimirPecasCapturadas(partida);
+            Console.WriteLine();
+            Console.WriteLine("Turno: " + partida.turno);
+            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+        }
+
+        public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
+        {
+            Console.WriteLine("Peças capturadas: ");
+            Console.Write("Brancas: ");
+            imprimirConjunto(partida.pecasCapturada(Cor.Branca));
+            Console.WriteLine();
+            Console.Write("Pretas: ");
+            imprimirConjunto(partida.pecasCapturada(Cor.Preta));
+            Console.WriteLine("");
+
+        }
+
+        public static void imprimirConjunto(HashSet<Peca> conjunto)
+        {
+            Console.Write("[");
+            foreach (Peca item in conjunto)
+            {
+                Console.Write(item + " ");
+            }
+            Console.Write("]");
+        }
+
         public static void imprimirtabuleiro(Tabuleiro tab)
         {
          for (int i = 0; i < tab.linhas; i++)
