@@ -50,6 +50,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tela.cs" />
+    <Compile Include="Xadrez\Rei.cs" />
+    <Compile Include="Xadrez\Torre.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
